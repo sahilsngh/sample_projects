@@ -3,6 +3,7 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 # remember the function is y = m*x + b for linear regression model.
+# this is sample data used to create model.
 # xs = np.array([1, 3, 5, 6, 9, 10], dtype=np.float)
 # ys = np.array([5, 6, 9, 8, 7, 11], dtype=np.float)
 
@@ -34,7 +35,8 @@ def coefficient_of_determination(ys_og, ys_line):
     squared_error_line = squared_error(ys_og, ys_line_mean)
     return 1 - (squared_error_reg / squared_error_line)
 
-xs, ys = dataset_generation(1000, 50, 2, correlation=False)
+# tweak the values inside to check and see how the model performes.
+xs, ys = dataset_generation(1000, 50, 2, correlation='pos')
 
 m, b = slope_of_line_and_intercept(xs, ys)
 reg_line = [(m*x+b) for x in xs]
