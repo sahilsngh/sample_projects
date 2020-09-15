@@ -232,5 +232,9 @@ if __name__ == "__main__":
         print ("%d out of %d predictions correct" % (correct, len(y_predict)))
 
         plot_contour(X_train[y_train==1], X_train[y_train==-1], clf)
-
-    test_soft()
+    
+    # testing out different types of datasets
+    test_linear()
+    #test_non_linear()
+    #test_soft()
+   
